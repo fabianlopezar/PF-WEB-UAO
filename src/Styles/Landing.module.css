@@ -1,59 +1,64 @@
-
-
-.title{
-    text-align: center; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
-    font-size: 80px; 
-    color: #F29F05; 
-    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
-}
-.subTitle{
-    text-align: center; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
-    font-size: 50px; 
-    color: #F29F05; 
-    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Elimina el scroll */
 }
 
-.div{
+.div {
   position: absolute;
-  top: 20%;
-  left: 29.5%;
-  margin: -25px 0 0 -79px; /* aplicar a top y al margen izquierdo un valor negativo par*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box; /* Incluye padding y border en el tamaño del div */
 }
-#fondo{
-  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-repeat: no-repeat;
-  height: 927px;
-  background-size: cover;
+
+.title {
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  font-size: 80px;
+  color: #F29F05;
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
 }
-.botonLanding{
-    color: rgb(0, 0, 0);
-  margin: 0 .5rem;
-  background-color:#bfd989;
-  border-radius: .4rem;
+
+.subTitle {
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  font-size: 50px;
+  color: #F29F05;
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
+}
+
+.botonLanding {
+  margin: 20px auto; /* Centra el botón horizontalmente */
+  background-color: #bfd989;
+  border-radius: 25px;
   font-size: 4rem;
   padding: .4rem 1rem;
-  cursor:pointer;
-
+  cursor: pointer;
   color: #F29F05;
   border: 1px solid #ffffff;
-  border-radius: 25px;
-  font-size: 60px; 
-  font-family: Comic Sans MS; 
-  font-weight:bold; 
-  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
 }
 
 .botonLanding:hover {
-  color:#bfd989;
+  color: #bfd989;
   background: #F29F05;
-  /*border: 3px solid #000000;*/
 }
-.video{
+
+.video {
+  position: fixed; /* Asegura que el video esté siempre en la misma posición */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+  z-index: -1; /* Coloca el video en el fondo, detrás de otros elementos */
 }
